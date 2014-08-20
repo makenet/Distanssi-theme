@@ -1,13 +1,19 @@
 <?php get_header(); ?>
-
+<div class="kartta">
+	<div class="container">
+		<h1><img class="karttalogo" src="<?php bloginfo('url'); ?>/kuvat/LogoWhite.png"/></h1>
+		<p>Joustava etÃ¤opetus nuorisotyÃ¶ntekijÃ¶iden digitaalisten taitojen vahivastajana</p>
+		 <p><a class="btn btn-primary btn-lg" role="button">Lue lisÃ¤Ã¤</a></p>
+	</div>
+</div>
+<div class="container">
 	<?php
 		query_posts('posts_per_page=1');
 			while(have_posts()) : the_post(); ?>
 			
-			<div class="jumbotron">
 				<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
 				<p><?php the_excerpt(); ?></p>
-			</div>
+
 			
 		<?php endwhile; wp_reset_query(); ?>
 		

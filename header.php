@@ -11,10 +11,10 @@
   <body>
 
  	<!-- Fixed navbar -->
-    <div class="navbar navbar-inverse navbar-static-top" role="navigation">
+    <div class="navbar navbar-static-top" role="navigation">
       <div class="container">
           
-      	<a class="navbar-brand" href="#">Project name</a>
+      	<a class="navbar-brand" href="#"><img class="navlogo" src="<?php bloginfo('url'); ?>/kuvat/LogoGreenSmall.png"/></a>
           
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navHeaderCollapse">
             <span class="sr-only">Toggle navigation</span>
@@ -38,5 +38,5 @@
       </div>
     </div>
 
-    <!-- Begin page content -->
-    <div class="container">
+
+    
