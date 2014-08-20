@@ -1,8 +1,8 @@
 <?php get_header(); ?>
-
+<div class="container">	
 	<div class="row">
 		<div class="col-md-9">
-			<div class="panel panel-default panel-body">
+			<div class="">
 				<?php while(have_posts()) : the_post(); ?>
 					<h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
 					<p class="text-muted"><?php the_author(); ?>, <?php the_time('F j, Y'); ?></p>
@@ -22,5 +22,5 @@
 			<?php endwhile; wp_reset_query(); ?>
 		</div>
 	</div>
-		
+</div>
 <?php get_footer(); ?>

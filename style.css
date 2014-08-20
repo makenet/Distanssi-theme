@@ -14,17 +14,26 @@ html {
 }
 body {
   /* Margin bottom by footer height */
-  margin-bottom: 60px;
+  margin-bottom: 200px;
 }
 .footer {
   position: absolute;
   bottom: 0;
   width: 100%;
   /* Set the fixed height of the footer here */
-  height: 60px;
-  background-color: #f5f5f5;
+  height: 200px;
+  background:#333;
+  color:#fff;
+  font-size:14px;
+  padding:40px 0;
 }
-
+.footer a, footer a:visited{
+	color:#66CC33
+}
+.logo-container{
+	margin-top:40px;
+	margin-bottom:40px;
+}
 
 /* Custom page CSS
 -------------------------------------------------- */
@@ -48,6 +57,10 @@ code {
 
 /* Värit
 --------------------------------------------------------------*/
+.navbar a{
+	background:#fff;
+}
+
 
 .btn-primary {
 	background-color: #66CC33;
@@ -69,33 +82,32 @@ a:hover, a:focus {
 /* Navigaatio
 ----------------------------------------------------------------*/
 .navlogo{
-	position:absolute;
-	top:11px;
-	left:-10px
-	max-width:100%;
-	height:25px;
+	height:35px;
 }
-.navbar{
-	border-bottom:1px solid #ccc;
+.navbar-nav>li>a{
+	padding-top: 25px;
+	padding-bottom: 25px;
 }
 /* Kartta 
 ---------------------------------------------------------*/
-.kartta{
+.otsake{
 	color:#fff;
 	padding:20px 0;
 	margin-top:-20px;
 	width:100%;
+	background-color:#666699;
+}
+.kartta{
 	max-height:449px;
 	background:url('../../../kuvat/worldpurple.jpg') center;
+	padding:30px 0;
 }
 .kartta p{
-	margin-bottom: 15px;
 	font-size: 35px;
 	font-weight: 200;
 	margin-right:33%;
 }
 .karttalogo{
-
 	max-width:66.6%;
 }
 /* Fontit
@@ -104,3 +116,5 @@ h1{
 	font-size: 60px;
 	line-height: 1;
 }
+/* Responsive
+--------------------------------------------------------------------*/

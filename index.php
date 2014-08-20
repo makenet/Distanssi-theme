@@ -1,11 +1,22 @@
-<?php get_header(); ?>
-<div class="kartta">
+<!DOCTYPE html>
+<html>
+  <head>
+	<meta charset="<?php bloginfo( 'charset' ); ?>">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+   	<title><?php wp_title( '|', true, 'right' ); ?></title>
+    <link href="<?php bloginfo('stylesheet_url'); ?>" rel="stylesheet">
+    <?php wp_head(); ?>
+  </head>
+  <body>
+<div class="otsake kartta">
 	<div class="container">
 		<h1><img class="karttalogo" src="<?php bloginfo('url'); ?>/kuvat/LogoWhite.png"/></h1>
-		<p>Joustava etÃ¤opetus nuorisotyÃ¶ntekijÃ¶iden digitaalisten taitojen vahivastajana</p>
-		 <p><a class="btn btn-primary btn-lg" role="button">Lue lisÃ¤Ã¤</a></p>
+		<p>Joustava etäopetus nuorisotyöntekijöiden digitaalisten taitojen vahivastajana</p>
+		 <p><a href="/info" class="btn btn-primary btn-lg" role="button">Lue lisää</a></p>
 	</div>
 </div>
+<?php get_template_part( 'nav' ); ?>
 <div class="container">
 	<?php
 		query_posts('posts_per_page=1');
@@ -17,7 +28,6 @@
 			
 		<?php endwhile; wp_reset_query(); ?>
 		
-		<div class="panel panel-default panel-body">
 			<div class="row">
 				<div class="col-md-2">
 					<ul class="nav nav-pills nav-stacked">
@@ -33,6 +43,4 @@
 
 				</div>
 			</div>
-		
-		</div>
 <?php get_footer(); ?>
