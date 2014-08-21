@@ -1,10 +1,26 @@
 		</div>
 		<div class="container">
-			<div class="row logo-container">
-				<div class="col-md-4" style="text-align:right;">EU</div>
-				<div class="col-md-4" style="text-align:center;">Vipuvoimaa</div>
-				<div class="col-md-4" style="text-align:left;">ESR</div>
-			</div>
+			<ul class="logolista">
+				<li>
+					<img src="<?php bloginfo('url'); ?>/kuvat/alametropolia.png" />
+				</li>
+				<li>
+					<img src="<?php bloginfo('url'); ?>/kuvat/alahumak.jpg" />
+				</li>
+				<li>
+					<img src="<?php bloginfo('url'); ?>/kuvat/alaverke.png" />
+				</li>
+			</ul>
+			<ul class="logolista">
+
+				<li>
+					<img src="<?php bloginfo('url'); ?>/kuvat/alaely.png" />
+				</li>
+				<li>
+					<img src="<?php bloginfo('url'); ?>/kuvat/alaesr.png" />
+				</li>
+
+			</ul>
 		</div>
 		<div class="footer">
 			<div class="container">

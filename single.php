@@ -1,4 +1,10 @@
 <?php get_header(); ?>
+<div class="otsake kartta">
+	<div class="container">
+		<h1>Blogi</h1>
+	</div>
+</div>
+
 <div class="container">	
 	<div class="row">
 		<div class="col-md-9">

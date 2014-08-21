@@ -1,8 +1,8 @@
 <!-- Fixed navbar -->
-    <div class="navbar navbar-static-top" role="navigation">
+    <div class="navbar navbar-default navbar-static-top" role="navigation">
       <div class="container">
           
-      	<a href="#" class="navbar-brand"><img class="navlogo" src="<?php bloginfo('url'); ?>/kuvat/LogoGreenSmall.png"/></a>
+      	<a class="navbar-brand" href="<?php bloginfo('url'); ?>"><img class="navlogo" src="<?php bloginfo('url'); ?>/kuvat/LogoGreenSmall.png"/></a>
           
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navHeaderCollapse">
             <span class="sr-only">Toggle navigation</span>
