@@ -1,7 +1,17 @@
 		</div>
+		<div class="container">
+			<div class="row logo-container">
+				<div class="col-md-4" style="text-align:right;">EU</div>
+				<div class="col-md-4" style="text-align:center;">Vipuvoimaa</div>
+				<div class="col-md-4" style="text-align:left;">ESR</div>
+			</div>
+		</div>
 		<div class="footer">
-			<div class = "container">
-				<p class="text-muted">Place sticky footer content here.</p>
+			<div class="container">
+				<div class="row">
+					<?php dynamic_sidebar( 'footer' ); ?>
+					<div class="clearfix"></div>
+				</div>
 			</div>
 		</div>
 			
