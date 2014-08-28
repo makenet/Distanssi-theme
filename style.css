@@ -14,18 +14,20 @@ html {
 }
 body {
   /* Margin bottom by footer height */
-  margin-bottom: 200px;
+  /* margin-bottom: 200px; */
+  position:relative;
 }
 .footer {
-  position: absolute;
-  bottom: 0;
+  /*position: absolute;
+  bottom: 0;*/
   width: 100%;
   /* Set the fixed height of the footer here */
-  height: 200px;
+  min-height: 200px;
   background:#333;
   color:#fff;
   font-size:14px;
-  padding:40px 0;
+  margin-top:80px;
+  padding:60px 0;
 }
 .footer a, footer a:visited{
 	color:#66CC33
@@ -83,20 +85,51 @@ a:hover, a:focus {
 	color: #66CC33;
 	text-decoration: underline;
 }
+.nav-pills>li.active>a, .nav-pills>li.active>a:hover, .nav-pills>li.active>a:focus{
+	background-color:#52CA42;
+}
 	
 /* Navigaatio
 ----------------------------------------------------------------*/
-.navlogo{
-
+.navbar{
+	width:100%;
+	border:none;
 }
 .navbar-nav>li>a{
 	padding-top: 25px;
 	padding-bottom: 25px;
 }
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>.active>a:focus {
+	color: #fff;
+	background-color: #66CC33;
+}
 .navbar-brand{
 	background-color:transparent!important;
 	height: 100%;
 }
+.fixed{
+	position:fixed;
+	top:0;
+}
+/* infonav
+--------------------------------------------------------------*/
+.infonav.affix{
+	position:fixed;
+	top:40px;
+}
+.infonav.affix-bottom{
+	positon:absolute	
+}
+.infonav li a{
+	background:#f8f8f8;
+}
+.infonav li a.infonav_H3{
+	margin-left:10px;
+	padding:5px 15px;
+	font-size:12px;
+}
+
+
 /* Kartta 
 ---------------------------------------------------------*/
 .otsake{
@@ -107,7 +140,6 @@ a:hover, a:focus {
 	background-color:#666699;
 }
 .kartta{
-	max-height:449px;
 	background:url('../../../kuvat/worldpurple.jpg') center;
 	padding:30px 0;
 }
@@ -118,6 +150,25 @@ a:hover, a:focus {
 .karttalogo{
 	max-width:100%;
 }
+.kartta .row{
+	position:relative;	
+}
+.mplogo{
+	position:absolute;
+	right:0;
+	top:25px;
+}
+.some{
+	position:absolute;
+	right:0;
+	bottom:5px;
+}
+.kartta .col-md-9{
+	position:static;
+}
+.sivukartta{
+/*	margin-top:70px;*/
+}
 /* Fontit
 ------------------------------------------------------------------*/
 h1{
@@ -126,6 +177,22 @@ h1{
 }
 /* Responsive
 --------------------------------------------------------------------*/
+@media screen and (max-width: 991px){
+	.mplogo{
+		position:static;
+		float:right;
+	}
+	.some{
+		position:static;
+		margin-top:10px;
+	}
+	.kartta h1{
+		margin-top:0;
+	}
+	.infonav{
+		display:none;
+	}
+
 @media screen and (max-width: 764px){
 	.navbar-brand{
 		padding: 10px 0;

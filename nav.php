@@ -1,5 +1,3 @@
-<!-- Fixed navbar -->
-    <div class="navbar navbar-default navbar-static-top" role="navigation">
       <div class="container">
           
       	<a class="navbar-brand" href="<?php bloginfo('url'); ?>"><img class="navlogo" src="<?php bloginfo('url'); ?>/kuvat/LogoGreenSmall.png"/></a>
@@ -24,4 +22,3 @@
 	        ?>
         </div><!--/.navbar-collapse -->
       </div>
-    </div>
