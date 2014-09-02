@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-<div class="otsake kartta">
+<div class="otsake pieniotsake kartta">
 	<div class="container">
 		<h1>Blogi</h1>
 	</div>

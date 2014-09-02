@@ -7,6 +7,7 @@
    	<title><?php wp_title( '|', true, 'right' ); ?></title>
     <link href="<?php bloginfo('stylesheet_url'); ?>" rel="stylesheet">
     <link rel="icon" type="image/png" href="<?php bloginfo('url'); ?>/kuvat/favicon.ico">
+    <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
     <?php wp_head(); ?>
   </head>
   <body data-spy="scroll" data-target="#myScrollspy">

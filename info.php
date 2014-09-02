@@ -13,8 +13,8 @@ get_header(); ?>
 
 <div class="container">
 	<div class="row">
-		<div class="col-md-9 content">
-			<p><?php the_content(''); ?></p>
+		<div class="col-md-9 content" id="main-content">
+			<?php the_content(''); ?>
 		</div>
 		<div class="sidebar col-md-3" id="myScrollspy">
 			<div class="infonav" data-spy="affix" data-offset-top="250" data-offset-bottom="300"> 
@@ -40,4 +40,24 @@ $(document).ready(function () {
         $('.infonav').width($('.sidebar').width());
     });
 
-});</script>
+});
+$(".infonav ul li a[href^='#']").on('click', function(e) {
+
+   // prevent default anchor click behavior
+   e.preventDefault();
+
+   // store hash
+   var hash = this.hash;
+
+   // animate
+   $('html, body').animate({
+       scrollTop: $(this.hash).offset().top
+     }, 300, function(){
+
+       // when done, add hash to url
+       // (default click behaviour)
+       window.location.hash = hash;
+     });
+
+});
+</script>

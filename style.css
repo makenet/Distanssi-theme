@@ -94,6 +94,7 @@ a:hover, a:focus {
 .navbar{
 	width:100%;
 	border:none;
+	margin-bottom:0;
 }
 .navbar-nav>li>a{
 	padding-top: 25px;
@@ -134,14 +135,19 @@ a:hover, a:focus {
 ---------------------------------------------------------*/
 .otsake{
 	color:#fff;
-	padding:20px 0;
-	margin-top:-20px;
 	width:100%;
 	background-color:#666699;
 }
 .kartta{
-	background:url('../../../kuvat/worldpurple.jpg') center;
-	padding:30px 0;
+	background:url('../../../kuvat/worldpurple.jpg') top center repeat-x;
+	background-color:#6f6fa1;
+	padding:60px 0;
+}
+.pieniotsake{
+	padding:20px 0;
+}
+.pieniotsake h1{
+	font-size:50px;
 }
 .kartta p{
 	font-size: 35px;
@@ -175,8 +181,74 @@ h1{
 	font-size: 60px;
 	line-height: 1;
 }
+/* Main Content
+-----------------------------------------------------------------------*/
+#main-content h2:first-child{
+	margin-top:0;
+}
+#main-content h2{
+	border-bottom:1px solid #e5e5e5;
+	margin-bottom:20px;
+	padding-bottom:9px;
+	margin-top:40px;
+}
+#main-content h3{
+	color:#555;
+}
+/* Etusivu
+-----------------------------------------------------------------------*/
+.nostot{
+	text-align:center;
+	padding:0 0 70px;
+	background:#777;
+	color:#f5f5f5;
+}
+.nostot a, .nostot a:visited{
+	color:#f5f5f5;
+}
+.nostot a:hover, .nostot a:active, .nostot a:focus{
+	color:#fff;
+	text-decoration:none;
+}
+.nostot p{
+	max-width:300px;
+	font-size:18px;
+	font-weight:bold;
+	margin-left:auto;
+	margin-right:auto;
+	font-family: 'Montserrat', sans-serif;
+
+}
+
+.nostot .glyphicon{
+	font-size:100px;
+	margin-top:70px;
+}
+.nostot h2{
+	font-family: 'Montserrat', sans-serif;
+	font-weight:bold;
+}
+
+/* Blogi
+-----------------------------------------------------------------------*/
+.artikkelikuva{
+	float:left;
+	margin-right:10px;
+}
+
+
 /* Responsive
 --------------------------------------------------------------------*/
+@media (min-width: 768px) {
+  .masthead-brand {
+    float: left;
+  }
+  .masthead-nav {
+    float: right;
+  }
+}
+
+
 @media screen and (max-width: 991px){
 	.mplogo{
 		position:static;
