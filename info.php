@@ -5,8 +5,9 @@ Template Name: info
 
 get_header(); ?>
 <?php while(have_posts()) : the_post(); ?>
-<div class="otsake kartta sivukartta">
+<div class="otsake kartta pieniotsake">
 	<div class="container">
+    	<img class="mplogo"src="<?php bloginfo('url') ?>/kuvat/mpwhite.png"/>
 		<h1><?php the_title(); ?></h1>
 	</div>
 </div>

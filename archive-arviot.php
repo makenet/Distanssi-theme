@@ -1,6 +1,7 @@
 <?php get_header(); ?>
 <div class="otsake pieniotsake kartta">
 	<div class="container">
+    	<img class="mplogo"src="<?php bloginfo('url') ?>/kuvat/mpwhite.png"/>
 		<h1>Blogi</h1>
 	</div>
 </div>

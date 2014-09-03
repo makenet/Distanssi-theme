@@ -37,10 +37,10 @@ Template Name: etusivu
 		<div class="container">
 			<div class="row">
 				<div class="col-md-4">
-					<a href="koulutus/#title1">
+					<a href="koulutus">
 						<span class="glyphicon glyphicon-globe"></span>
-						<h2>ALKAVAT MOOCIT</h2>
-						<p>Katso mitä kiinostavia MOOC-kursseja on alkamassa</p> 
+						<h2>MOOC-OPINNOT</h2>
+						<p>Korvaa AMK-opintoja MOOC-toteutuksena</p> 
 					</a>
 				</div>
 				<div class="col-md-4">
@@ -67,12 +67,30 @@ Template Name: etusivu
 					<?php wp_list_categories('orderby=name&title_li'); ?>
 				</ul>
 			</div>-->
-			<div class="col-md-12">
-				<?php query_posts( 'posts_per_page=5' ); ?>
-				<?php while(have_posts()) : the_post(); ?>
-					<h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
-					<p><?php the_excerpt(); ?></p>
-					<p class="text-muted"><?php the_author(); ?>, <?php the_time('F j, Y'); ?></p>
+			<div class="col-md-6">
+				<?php query_posts( 'posts_per_page=2' ); ?>
+                <?php while(have_posts()) : the_post(); ?>
+                	<div class="media etusivu-blog-post">
+                        <a class="pull-left thumbnail" href="<?php the_permalink(); ?>">
+                        	<?php if ( has_post_thumbnail() ) : // check if the post has a Post Thumbnail assigned to it.?>
+                            	<?php the_post_thumbnail(array( 'class' => 'media-object etusivu-blog-thumbnail' )); ?>
+                        	<?php else : ?>
+                        		<img class="media-object  etusivu-blog-thumbnail" src="<?php bloginfo('url') ?>/kuvat/facebooklogo.jpg" />
+                    		<?php endif; ?>
+                       	</a>
+                        <div class=media-body etusivu-blog-body">
+                        	<h4 class="media-heading"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
+                        	<?php the_excerpt(); ?>
+                       		<p class="text-muted"><?php the_author(); ?>, <?php the_time('F j, Y'); ?></p>
+                        </div>
+                    </div>
+                <?php endwhile; wp_reset_query(); ?>
+			</div>
+            <div class="col-md-6">
+				<?php $args = array( 'post_type' => 'nostot', 'posts_per_page' => 1 );
+				$loop = new WP_Query( $args );
+				while ( $loop->have_posts() ) : $loop->the_post(); ?>
+					<div class="well"><?php the_content(); ?></div>
 				<?php endwhile; wp_reset_query(); ?>
 			</div>
 		</div>

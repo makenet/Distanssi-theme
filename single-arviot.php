@@ -1,6 +1,7 @@
 <?php get_header(); ?>
 <div class="otsake kartta pieniotsake">
 	<div class="container">
+    	<img class="mplogo"src="<?php bloginfo('url') ?>/kuvat/mpwhite.png"/>
 		<h1>Arviot</h1>
         <p>Opiskelijat arvioivat oppimisympäristöjä opintojakson aikana</p>
         <p><a href="<?php bloginfo('url') ?>/arviot" class="btn btn-primary btn-lg" role="button">Näytä kaikki arviot</a></p>

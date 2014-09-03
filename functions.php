@@ -5,6 +5,7 @@
 	
 	add_theme_support( 'post-thumbnails' ); 
 	
+	// Rekisteröi arviot ---------------------------------------------
 	add_action( 'init', 'arvio_init' );
 
 	function arvio_init() {
@@ -42,6 +43,45 @@
 		register_post_type( 'arviot', $args );
 	}
 	
+	// Rekisteröi nostot -------------------------------------------
+	add_action( 'init', 'nosto_init' );
+
+	function nosto_init() {
+		$labels = array(
+			'name'               => _x( 'Nostot'),
+			'singular_name'      => _x( 'Nosto' ),
+			'menu_name'          => _x( 'Nostot'),
+			'name_admin_bar'     => _x( 'Nosto' ),
+			'add_new'            => _x( 'Lisää uusi' ),
+			'add_new_item'       => __( 'Lisää uusi nosto' ),
+			'new_item'           => __( 'Uusi nosto' ),
+			'edit_item'          => __( 'Muokkaa nostota' ),
+			'view_item'          => __( 'Näytä nosto' ),
+			'all_items'          => __( 'Kaikki nostot' ),
+			'search_items'       => __( 'Etsi nostoita' ),
+			'not_found'          => __( 'Nostota ei löytynyt' ),
+			'not_found_in_trash' => __( 'Nostota ei löytynyt roskakorista.' )
+		);
+	
+		$args = array(
+			'labels'             => $labels,
+			'public'             => true,
+			'publicly_queryable' => true,
+			'show_ui'            => true,
+			'show_in_menu'       => true,
+			'query_var'          => true,
+			'rewrite'            => array( 'slug' => 'nostot' ),
+			'capability_type'    => 'post',
+			'has_archive'        => true,
+			'hierarchical'       => false,
+			'menu_position'      => null,
+			'supports'           => array( 'title', 'editor' )
+		);
+	
+		register_post_type( 'nostot', $args );
+	}
+	
+	// Rekisteröi 
 	register_nav_menus( array(
     	'primary' => __( 'Primary Menu', 'distanssi-bs' ),
     ) );
@@ -55,15 +95,4 @@
 		'after_title' => '</h4>', 
 	));
 	
-	 if ( function_exists('register_sidebar') ) 
-		register_sidebar(array(
-		'name' => 'Info sidebar',
-		'id' => 'info_sidebar', 
-		'before_widget' => '', 
-		'after_widget' => '', 
-		'before_title' => '<h4>', 
-		'after_title' => '</h4>', 
-	));
-
-
 ?>

@@ -32,9 +32,11 @@ body {
 .footer a, footer a:visited{
 	color:#66CC33
 }
-.logo-container{
-	margin-top:40px;
-	margin-bottom:40px;
+.container.logo-container{
+	padding:20px 0;
+}
+.logo-container img{
+	max-width:100%;
 }
 .logolista{
 	list-style:none;
@@ -146,6 +148,7 @@ a:hover, a:focus {
 .pieniotsake{
 	padding:20px 0;
 }
+
 .pieniotsake h1{
 	font-size:50px;
 }
@@ -172,8 +175,13 @@ a:hover, a:focus {
 .kartta .col-md-9{
 	position:static;
 }
-.sivukartta{
-/*	margin-top:70px;*/
+.pieniotsake .container{
+	position:relative;
+}
+.pieniotsake .mplogo {
+	position: absolute;
+	right: 15px;
+	top: 11px;
 }
 /* Fontit
 ------------------------------------------------------------------*/
@@ -190,10 +198,13 @@ h1{
 	border-bottom:1px solid #e5e5e5;
 	margin-bottom:20px;
 	padding-bottom:9px;
-	margin-top:40px;
+	margin-top:0;
+	padding-top:40px;
 }
 #main-content h3{
 	color:#555;
+	margin-top:0;
+	padding-top:20px;
 }
 /* Etusivu
 -----------------------------------------------------------------------*/
@@ -228,7 +239,13 @@ h1{
 	font-family: 'Montserrat', sans-serif;
 	font-weight:bold;
 }
-
+.etusivu-blog-thumbnail{
+	width:64px;
+	height:auto;
+}
+.etusivu-blog-body{
+	margin-left:74px;
+}
 /* Blogi
 -----------------------------------------------------------------------*/
 .artikkelikuva{
@@ -236,6 +253,15 @@ h1{
 	margin-right:10px;
 }
 
+/*----------------------------------------------------------------------*/
+
+.ilmo{
+	max-width:725px!important;
+	margin:0 auto;
+}
+.well .well{
+	background:#ececec;
+}
 
 /* Responsive
 --------------------------------------------------------------------*/
